@@ -35,3 +35,4 @@ Googles Antigravity
 3. update the pyproject.toml file to use python verson >= 3.10.
 4. For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
 5. in the geographic overview, the current name of the cities should be displayed on top of the map region
+6. It should display it on the map by default, not only when its hovered

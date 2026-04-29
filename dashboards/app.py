@@ -91,12 +91,13 @@ with tab1:
     )
 
     fig_map = go.Figure(data=go.Scattergeo(
-        lon = map_df['lon'],
-        lat = map_df['lat'],
-        text = map_df['city'],
-        hovertext = map_df['hover_text'],
+        lon = map_df['lon'].tolist(),
+        lat = map_df['lat'].tolist(),
+        text = map_df['city'].tolist(),
+        hovertext = map_df['hover_text'].tolist(),
         mode = 'markers+text',
         textposition="top center",
+        textfont=dict(color='black', size=14),
         hoverinfo='text',
         marker=dict(
             size=map_df['size'],
