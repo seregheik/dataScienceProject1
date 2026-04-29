@@ -36,3 +36,5 @@ Googles Antigravity
 4. For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
 5. in the geographic overview, the current name of the cities should be displayed on top of the map region
 6. It should display it on the map by default, not only when its hovered
+7. the temperature for the cities show nan, make the dashboard check for the most recent NOAA temperature available and carry it over.
+8. format the date in the hover tip for correlation analysis to be human friendly and readable

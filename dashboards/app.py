@@ -21,6 +21,9 @@ def load_data():
         return pd.DataFrame()
     df = pd.read_csv(PROCESSED_FILE)
     df['date'] = pd.to_datetime(df['date'])
+    df = df.sort_values(['city', 'date'])
+    df['temp_max'] = df.groupby('city')['temp_max'].ffill()
+    df['temp_min'] = df.groupby('city')['temp_min'].ffill()
     return df
 
 df = load_data()
