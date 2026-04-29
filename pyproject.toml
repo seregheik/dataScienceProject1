@@ -5,7 +5,7 @@ description = "A Streamlit project combining NOAA weather data and EIA electrici
 authors = [
     { name = "Developer" }
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 dependencies = [
     "streamlit>=1.20.0",
     "pandas>=2.0.0",
