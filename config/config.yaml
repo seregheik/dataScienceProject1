@@ -1,0 +1,44 @@
+api:
+  noaa_base_url: "https://www.ncei.noaa.gov/cdo-web/api/v2/data"
+  eia_base_url: "https://api.eia.gov/v2/electricity/rto/daily-region-data/data/"
+
+thresholds:
+  temp_min_f: -50.0
+  temp_max_f: 130.0
+  energy_min: 0.0
+
+cities:
+  "New York":
+    state: "New York"
+    noaa_station: "GHCND:USW00094728"
+    eia_region: "NYIS"
+    lat: 40.7128
+    lon: -74.0060
+
+  "Chicago":
+    state: "Illinois"
+    noaa_station: "GHCND:USW00094846"
+    eia_region: "PJM"
+    lat: 41.8781
+    lon: -87.6298
+
+  "Houston":
+    state: "Texas"
+    noaa_station: "GHCND:USW00012960"
+    eia_region: "ERCO"
+    lat: 29.7604
+    lon: -95.3698
+
+  "Phoenix":
+    state: "Arizona"
+    noaa_station: "GHCND:USW00023183"
+    eia_region: "AZPS"
+    lat: 33.4484
+    lon: -112.0740
+
+  "Seattle":
+    state: "Washington"
+    noaa_station: "GHCND:USW00024233"
+    eia_region: "SCL"
+    lat: 47.6062
+    lon: -122.3321
