@@ -165,17 +165,18 @@ with tab1:
 
     st.header("3. Correlation Analysis")
     
-    plot_df = filtered_df.dropna(subset=['temp_max', 'energy_demand'])
+    plot_df = filtered_df.dropna(subset=['temp_max', 'energy_demand']).copy()
     if not plot_df.empty:
+        plot_df['Date'] = plot_df['date'].dt.strftime('%B %d, %Y')
         slope, intercept, r_value, p_value, std_err = linregress(plot_df['temp_max'], plot_df['energy_demand'])
         r_squared = r_value ** 2
         line_eq = f"y = {slope:.2f}x + {intercept:.2f}"
         
         fig_scatter = px.scatter(
             plot_df, x='temp_max', y='energy_demand', color='city',
-            hover_data=['date'],
+            hover_data={'Date': True, 'temp_max': ':.1f', 'energy_demand': ':.0f', 'city': False},
             title=f"Correlation (R²: {r_squared:.4f}, r: {r_value:.4f})  |  {line_eq}",
-            labels={'temp_max': 'Max Temperature (°F)', 'energy_demand': 'Energy Demand'}
+            labels={'temp_max': 'Max Temperature (°F)', 'energy_demand': 'Energy Demand', 'Date': 'Date'}
         )
         
         fig_scatter.add_traces(go.Scatter(
