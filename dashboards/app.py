@@ -111,7 +111,7 @@ with tab1:
         margin=dict(l=0, r=0, t=30, b=0),
         height=400
     )
-    st.plotly_chart(fig_map, use_container_width=True)
+    st.plotly_chart(fig_map, width='stretch')
 
     
     st.header("2. Time Series Analysis")
@@ -156,7 +156,7 @@ with tab1:
     )
     fig_ts.update_yaxes(title_text="Temperature (°F)", secondary_y=False)
     fig_ts.update_yaxes(title_text="Energy (MWh)", secondary_y=True)
-    st.plotly_chart(fig_ts, use_container_width=True)
+    st.plotly_chart(fig_ts, width='stretch')
 
     st.header("3. Correlation Analysis")
     
@@ -180,7 +180,7 @@ with tab1:
             line=dict(color='black', dash='dash')
         ))
         
-        st.plotly_chart(fig_scatter, use_container_width=True)
+        st.plotly_chart(fig_scatter, width='stretch')
     else:
         st.info("Not enough data points for correlation analysis.")
 
@@ -217,7 +217,7 @@ with tab1:
         )
         
         fig_heatmap.update_layout(title="Average Energy Usage by Temperature and Day of Week")
-        st.plotly_chart(fig_heatmap, use_container_width=True)
+        st.plotly_chart(fig_heatmap, width='stretch')
 
 with tab2:
     st.header("Data Quality Report")
