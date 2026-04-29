@@ -93,7 +93,8 @@ with tab1:
     fig_map = go.Figure(data=go.Scattergeo(
         lon = map_df['lon'],
         lat = map_df['lat'],
-        text = map_df['hover_text'],
+        text = map_df['city'],
+        hovertext = map_df['hover_text'],
         mode = 'markers+text',
         textposition="top center",
         hoverinfo='text',
